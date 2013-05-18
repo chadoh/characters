@@ -37,6 +37,11 @@
 			width:0.72em;
 			height:0.72em;
 			}
+    #soft-background {
+      background-color: rgba(255,255,255,0.5);
+      border-radius: 1em;
+      text-shadow: 0 0 3px #000, 0px 1px 4px #555;
+      }
 	</style>
 </head>
 <body class="list">
@@ -52,82 +57,23 @@
     </ul>
     <p>You'll come away from the class with very real, helpful skills that will help you understand and fix ugly problems while the rest of your team just wants to give up.</p>
 	</header>
-	<section class="slide"><div>
-    <h2>Flower Power!</h2>
-    <p>http://www.jave.de/figlet/fonts/overview.html</p>
+	<section class="slide cover" id="Cover"><div>
+    <div id="soft-background">
+      <h2>Binary to Emoji: What does 140 characters even mean?</h2>
+      <p>Brought you by <a href="https://github.com/chadoh">chadoh</a>, from <a href="http://www.pipelinedeals.com">PipelineDeals</a></p>
+    </div>
+		<img src="pictures/cover.jpg" alt="">
+		<!-- Image from an article about "Are emojis making us dumber or enriching our communications?" from The Independent, http://ph.ly/emoji -->
+	</div></section>
+	<section class="slide cover"><div>
+    <img src="pictures/switches.jpg" alt="">
+    <!-- Buy this beautiful light switch cover at http://www.etsy.com/listing/66378333/beautiful-chip-carved-light-switch -->
 	</div></section>
 	<section class="slide"><div>
-    <h2>Emojis in your web app</h2>
+    <h2>References</h2>
+    <p>http://www.jave.de/figlet/fonts/overview.html</p>
     <p>http://blog.manbolo.com/2012/10/29/supporting-new-emojis-on-ios-6</p>
 	</div></section>
-	<section class="slide cover" id="Cover"><div>
-		<h2>Ansible Basics</h2>
-    <p>Brought you by <a href="https://github.com/chadoh">chadoh</a>, from <a href="http://www.pipelinedeals.com">PipelineDeals</a></p>
-		<img src="pictures/cover.png" alt="">
-		<!-- This photo is album art! http://sovarozum.bandcamp.com/track/skirmish-the-enemys-gate-is-down -->
-	</div></section>
-  <section class="slide"><div>
-    <h2><a href="http://ansible.cc/docs/">ansible.cc/docs</a></h2>
-    <p>Approachable &amp; up-to-date!</p>
-  </section></div>
-  <section class="slide"><div>
-    <h2>Install it</h2>
-    <p>Ansible is written by Python folk, so you've gotta <a href="http://ansible.cc/docs/gettingstarted.html#requirements">do a wee bit of that</a>:</p>
-		<pre>
-			<code>easy_install pip</code>
-			<code>pip install paramiko PyYAML jinja2</code>
-      <code>git clone git@github.com:ansible/ansible.git ~/<mark>?</mark>/</code>
-      <code>echo "source ~/<mark>?</mark>/ansible/hacking/env-setup -q" \</code>
-      <code> &nbsp;&nbsp;&nbsp;&nbsp; &gt;&gt; ~/.bashrc</code>
-		</pre>
-  </section></div>
-  <section class="slide"><div>
-    <h2>Tell Ansible about your machines</h2>
-    <p>By default, Ansible looks for your <a href="http://ansible.cc/docs/patterns.html">inventory file</a> at /etc/ansible/hosts</p>
-    <pre>
-      <code>localhost ansible_connection=local</code>
-      <code>[work]</code>
-      <code>shared-dev ansible_ssh_host=<mark>fqdn</mark> ansible_ssh_user=<mark>user</mark></code>
-      <code>prod ansible_ssh_host=<mark>fqdn</mark> ansible_ssh_user=<mark>user</mark></code>
-      <code>[personal]</code>
-      <code>bitcoins ansible_ssh_host=<mark>fqdn</mark> ansible_ssh_user=<mark>user</mark></code>
-    </pre>
-  </section></div>
-  <section class="slide"><div>
-    <h2>One-offs</h2>
-    <p>Use individual ansible <a href="http://ansible.cc/docs/modules.html">modules</a> to do stuff to all (or some (or one)) your machines at once.</p>
-    <pre>
-      <code>ansible all -m copy -a "src=~/.bashrc dest=/var/tmp/bashrc"</code>
-      <code>ansible work -m apt -a "name=cowsay"</code>
-      <code>ansible work -m shell -a "cowsay Hooray Ansible"</code>
-      <code>ansible localhost -m homebrew -a "name=cowsay"</code>
-    </pre>
-  </section></div>
-  <section class="slide"><div>
-    <h2>Playbooks</h2>
-    <p><a href="http://ansible.cc/docs/playbooks.html">Playbooks</a> are a bundled set of one-offs, saved in a yaml file.</p>
-    <p>These get too lengthy for a slide; check out <a href="https://github.com/chadoh/ansible-starter/blob/master/playbook.yml">this simple starter playbook</a>.</p>
-  </section></div>
-  <section class="slide"><div>
-    <h2>Vagrant</h2>
-    <p><a href="http://www.vagrantup.com">Vagrant</a> allows you to <a href="http://docs.vagrantup.com/v2/provisioning/ansible.html">set up a development VM with Ansible</a>.</p>
-    <pre>
-      <code>config.vm.network :private_network, ip: "192.168.111.222"</code>
-      <code>config.vm.provision :ansible do |ansible|</code>
-      <code>  ansible.playbook = "../ansible-starter/playbook.yml"</code>
-      <code>  ansible.inventory_file = "../ansible-starter/hosts"</code>
-      <code>end</code>
-    </pre>
-  </section></div>
-  <section class="slide"><div>
-    <h2>Vagrant troubleshooting</h2>
-    <p>Sometimes, when you run <code>vagrant up</code>, you'll get unexpected failures. Before getting distraught, try running <code>vagrant reload</code> and perhaps (if that fails, too) <code>vagrant up</code> again.</p>
-    <ul>
-      <li>list for</li>
-      <li>the sake of</li>
-      <li>a list</li>
-    </ul>
-  </section></div>
 	<p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>
 	<!--
 		To hide progress bar from entire presentation

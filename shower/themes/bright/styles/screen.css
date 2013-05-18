@@ -261,7 +261,8 @@ pre {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; }
+    z-index: -1;
+    width: 100%; }
   .slide.cover.w img, .slide.cover.w svg, .slide.cover.w video,
   .slide.cover.w object, .slide.cover.w canvas {
     top: 50%;
