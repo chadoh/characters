@@ -13,6 +13,13 @@ We'll have fun in this class. We'll learn about:
 * How filling a tweet with emojis costs Twitter 4x more than your other
   tweets
 
-You'll come away from the class with very real, helpful skills that will
-help you understand and fix ugly problems while the rest of your team
-just wants to give up.
+And through it, we'll learn
+
+* What that "charset" meta tag means, and why you always put at the top
+  of your html
+* How to make good choices when setting up your databases
+* Why “smart quotes” and other characters sometimes show up as
+  gobbledegook on websites, and how to analyze and fix the problem
+* Just enough binary to achieve complete command line mastery
+* About the wonderful world of Unicode and font-based icon sets, which
+  are superior to images when making resolution-proof designs
